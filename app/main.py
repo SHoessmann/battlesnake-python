@@ -71,7 +71,7 @@ def spiral(x,y,myself,data,board):
 def move():
 	data = bottle.request.json
 	board = [[0 for x in range(data['width'])]for y in range(data['height'])]
-	
+	'''
 	
 	#if spiraling == 1:
 		#return spiral(spiral_focus[0],spiral_focus[1],)
@@ -90,7 +90,7 @@ def move():
 		for space in enemy['coords'][2:-1]:
 			board[space[0]][space[1]] = 3
 		board[enemy['coords'][0]][enemy['coords'][1]] = 4
-	
+	'''
 	direction = random.choice(directions)
 	if direction == 'up':
 		go = {myself['coords'][0],myself['coords'][1]-1}
