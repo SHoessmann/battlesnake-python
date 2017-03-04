@@ -32,7 +32,7 @@ def start():
 	}
 
 def checkSpace(x,y,data,board):
-	if x >= data['width'] or y >= data['height']:
+	if x >= data['width'] or y >= data['height'] or x < 0 or y < 0:
 		return 0
 	if board[x][y] == 2 or board[x][y] == 3 or board[x][y] == 4:
 		return 0
