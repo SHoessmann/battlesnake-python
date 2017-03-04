@@ -90,7 +90,7 @@ def move():
 		for space in enemy['coords'][2:-1]:
 			board[space[0]][space[1]] = 3
 		board[enemy['coords'][0]][enemy['coords'][1]] = 4
-	'''
+	
 	direction = random.choice(directions)
 	if direction == 'up':
 		go = {myself['coords'][0],myself['coords'][1]-1}
@@ -116,7 +116,11 @@ def move():
 		'move': direction,
 		'taunt': '???'
 	}
-
+	'''
+	return {
+		'move': 'down',
+		'taunt': '???'
+	}
 
 # Expose WSGI app (so gunicorn can find it)
 application = bottle.default_app()
